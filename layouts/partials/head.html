@@ -60,6 +60,11 @@
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 {{- end -}}
 
+<!-- umami -->
+{{- if .Site.Params.umami.enable -}}
+  <script defer src="https://umami-steel-one.vercel.app/script.js" data-website-id=" .Site.Params.umami.dataWebsiteId "></script>
+{{- end -}}
+
 <!-- Styles -->
 {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 <link href="{{ $style.RelPermalink }}" rel="stylesheet">
