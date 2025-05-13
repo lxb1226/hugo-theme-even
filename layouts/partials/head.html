@@ -62,7 +62,7 @@
 
 <!-- umami -->
 {{- if .Site.Params.umami.enable -}}
-  <script defer src="https://umami-steel-one.vercel.app/script.js" data-website-id=" .Site.Params.umami.dataWebsiteId "></script>
+  <script defer src="https://umami-steel-one.vercel.app/script.js" data-website-id="{{.Site.Params.umami.dataWebsiteId}}"></script>
 {{- end -}}
 
 <!-- Styles -->
